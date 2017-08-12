@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+    p{
+        cursor:pointer;
+    }
+    p[class='select']{
+        border:1px solid #000;
+    }
+</style>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+      var ite=$("p[date='iterm']");
+      var ale=$(".alert");
+      ite.each(function(){
+        $(this).click(function(){
+            $(this).addClass("select").siblings().removeClass("select");;
+        })
+      });
+      ale.click(function(){
+        var se=$(".select");
+        alert(se[0].innerHTML);
+      });
+    });
+</script>
+
+</head>
+<body>
+    <p class="select" date="iterm">iterm1</p>
+    <p date="iterm">iterm2</p>
+    <p date="iterm">iterm3</p>
+    <p date="iterm">iterm4</p>
+    <div class="alert">alert</div>
+</body>
+
+</html>
